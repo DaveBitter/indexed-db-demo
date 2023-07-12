@@ -1,0 +1,232 @@
+:root {
+    /* Grays */
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #adb5bd;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+
+    /* Blues */
+    --blue-100: #e7f5ff;
+    --blue-200: #d0ebff;
+    --blue-300: #a5d8ff;
+    --blue-400: #74c0fc;
+    --blue-500: #4dabf7;
+    --blue-600: #339af0;
+    --blue-700: #228be6;
+    --blue-800: #1c7ed6;
+    --blue-900: #1971c2;
+
+    /* Reds */
+    --red-100: #fff5f5;
+    --red-200: #ffe3e3;
+    --red-300: #ffc9c9;
+    --red-400: #ffa8a8;
+    --red-500: #ff8787;
+    --red-600: #ff6b6b;
+    --red-700: #fa5252;
+    --red-800: #f03e3e;
+    --red-900: #e03131;
+
+    --primary-color: var(--blue-500);
+    --primary-color-hover: var(--blue-600);
+    --primary-color-focus: var(--blue-700);
+    --primary-color-active: var(--blue-800);
+    --primary-color-disabled: var(--gray-400);
+}
+
+/* Change variables for dark color sheme */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Grays */
+        --gray-100: #212529;
+        --gray-200: #343a40;
+        --gray-300: #495057;
+        --gray-400: #6c757d;
+        --gray-500: #adb5bd;
+        --gray-600: #ced4da;
+        --gray-700: #dee2e6;
+        --gray-800: #e9ecef;
+        --gray-900: #f8f9fa;
+
+        /* Blues */
+        --blue-100: #1971c2;
+        --blue-200: #1c7ed6;
+        --blue-300: #228be6;
+        --blue-400: #339af0;
+        --blue-500: #4dabf7;
+        --blue-600: #74c0fc;
+        --blue-700: #a5d8ff;
+        --blue-800: #d0ebff;
+        --blue-900: #e7f5ff;
+
+        /* Reds */
+        --red-100: #e03131;
+        --red-200: #f03e3e;
+        --red-300: #fa5252;
+        --red-400: #ff6b6b;
+        --red-500: #ff8787;
+        --red-600: #ffa8a8;
+        --red-700: #ffc9c9;
+        --red-800: #ffe3e3;
+        --red-900: #fff5f5;
+
+        --primary-color: var(--blue-500);
+        --primary-color-hover: var(--blue-600);
+        --primary-color-focus: var(--blue-700);
+        --primary-color-active: var(--blue-800);
+        --primary-color-disabled: var(--gray-400);
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 2rem;
+    padding: 0;
+    color: var(--gray-700);
+    background-color: var(--gray-100);
+}
+
+body, input, textarea {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+input {
+    color: var(--gray-700);
+    background-color: var(--gray-200);
+}
+
+.button {
+    padding: 1rem;
+    color: var(--gray-700);
+    background-color: var(--gray-200);
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--gray-300);
+}
+
+.button:focus {
+    background-color: var(--gray-400);
+}
+
+.button:active {
+    background-color: var(--gray-500);
+}
+
+.button:disabled {
+    background-color: var(--gray-400);
+    cursor: not-allowed;
+}
+
+.button.button--primary {
+    color: var(--gray-100);
+    background-color: var(--primary-color);
+}
+
+.button.button--primary:hover {
+    background-color: var(--primary-color-hover);
+}
+
+.button.button--primary:focus {
+    background-color: var(--primary-color-focus);
+}
+
+.button.button--primary:active {
+    background-color: var(--primary-color-active);
+}
+
+.button.button--primary:disabled {
+    background-color: var(--primary-color-disabled);
+    cursor: not-allowed;
+}
+
+.button.button--error {
+    color: var(--red-700);
+    background-color: var(--red-200);
+}
+
+.button.button--error:hover {
+    background-color: var(--red-300);
+}
+
+.button.button--error:focus {
+    background-color: var(--red-400);
+}
+
+.button.button--error:active {
+    background-color: var(--red-500);
+}
+
+.button.button--error:disabled {
+    background-color: var(--red-500);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    min-height: 100vh;
+    max-width: 50rem;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form input,
+.form button {
+    padding: 1rem 0.5rem;
+    border: 1px solid var(--gray-400);
+    border-radius: 0.25rem;
+}
+
+.form input {
+    accent-color: var(--primary-color);
+}
+
+.form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.form legend {
+    margin-bottom: 0.5rem;
+}
+
+.table-row[data-status='complete'] {
+    opacity: 0.4;
+}
+
+.table th {
+    text-align: left;
+}
+
+.table-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.table-actions button {
+    flex: 1;
+}
