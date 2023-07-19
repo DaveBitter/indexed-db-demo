@@ -1,6 +1,8 @@
-# Parcel Boilerplate
+# IndexedDB Demo
 
-This repository holds the boilerplate code for a Parcel project.
+![Screenshot of the todo app form with several mock todos underneath](./docs/todo-app.png)
+
+This repository holds the code showcasing the IndexedDB. You can [view the demo here](https://indexed-db-demo.davebitter.com/).
 
 ## Getting started
 

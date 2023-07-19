@@ -6,20 +6,21 @@ const handleTaskFormSubmit = (e) => {
     const formData = new FormData(elements.taskForm);
 
     const task = {
-        id: Math.floor(Math.random() * 1000),
         status: 'incomplete',
         task: formData.get('task'),
         date: formData.get('date'),
         priority: elements.taskForm.querySelector('input[name="priority"]:checked').value
     };
 
-    insertTaskInDOM(task);
 
     // Add task to database
     db.addTask(task)
-        .then(() => console.log('Task added to database'))
-        .catch(err => console.error(err));
+    .then((id) => {
+        console.log('Task added to database');
+        insertTaskInDOM({...task, id});
 
+        })
+        .catch(err => console.error(err));
 
     elements.taskForm.reset();
 }

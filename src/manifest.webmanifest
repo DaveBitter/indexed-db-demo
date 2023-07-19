@@ -1,6 +1,6 @@
 {
-  "name": "Parcel Boilerplate",
-  "short_name": "Parcel Boilerplate",
+  "name": "IndexedDB Demo",
+  "short_name": "IndexedDB Demo",
   "description": "A Boilerplate build with Parcel",
   "scope": "/",
   "start_url": "/",

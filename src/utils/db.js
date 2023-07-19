@@ -1,3 +1,5 @@
+let openRequest;
+
 export const db = {
     // Open the database and create the tasks object store if needed
     openDB: () => {
